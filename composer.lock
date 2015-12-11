@@ -1,0 +1,136 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "hash": "4684a70d0594d1bd0bea78b3cd4a28e5",
+    "content-hash": "4fe20e1fb691903f2fe3cd680f802081",
+    "packages": [
+        {
+            "name": "klarna/checkout",
+            "version": "v4.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/klarna/kco_php.git",
+                "reference": "00f1deed2155e525bb36d87a93c1471ba3333baf"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/klarna/kco_php/zipball/00f1deed2155e525bb36d87a93c1471ba3333baf",
+                "reference": "00f1deed2155e525bb36d87a93c1471ba3333baf",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpmd/phpmd": "~2.2",
+                "phpunit/phpunit": "~4.6",
+                "satooshi/php-coveralls": "~0.6",
+                "squizlabs/php_codesniffer": "~2.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Klarna": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "description": "Wrapper for the Klarna Checkout API",
+            "homepage": "http://developers.klarna.com",
+            "time": "2015-06-11 12:26:37"
+        },
+        {
+            "name": "klarna/php-xmlrpc",
+            "version": "v4.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/klarna/php-xmlrpc.git",
+                "reference": "7fe154c30b390e544a0f4f885805ef563efbe147"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/klarna/php-xmlrpc/zipball/7fe154c30b390e544a0f4f885805ef563efbe147",
+                "reference": "7fe154c30b390e544a0f4f885805ef563efbe147",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "php": ">=5.2.16",
+                "phpxmlrpc/phpxmlrpc": "~3.0"
+            },
+            "require-dev": {
+                "apigen/apigen": "4.0.*",
+                "klarna/apigen-theme": "~1.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Klarna AB",
+                    "email": "integration@klarna.com"
+                }
+            ],
+            "description": "PHP SDK for Klarna's XMLRPC API",
+            "homepage": "http://developers.klarna.com",
+            "time": "2015-06-02 13:11:21"
+        },
+        {
+            "name": "phpxmlrpc/phpxmlrpc",
+            "version": "3.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/gggeek/phpxmlrpc.git",
+                "reference": "490862c33009397151ac39c811b6ee8e24689692"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/gggeek/phpxmlrpc/zipball/490862c33009397151ac39c811b6ee8e24689692",
+                "reference": "490862c33009397151ac39c811b6ee8e24689692",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.1.0"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "lib/xmlrpc.inc",
+                    "lib/xmlrpcs.inc"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "A php library for building xmlrpc clients and servers",
+            "homepage": "http://gggeek.github.io/phpxmlrpc/",
+            "keywords": [
+                "webservices",
+                "xmlrpc"
+            ],
+            "time": "2015-04-19 00:17:47"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}
