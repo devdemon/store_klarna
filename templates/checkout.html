@@ -1,0 +1,26 @@
+{embed="store_example/_header"}
+
+<ul class="breadcrumb">
+    <li><a href="{path='store_example'}">Example Store</a> <span class="divider">&raquo;</span></li>
+    <li><a href="{path='store_example/checkout'}">Checkout</a> <span class="divider">&raquo;</span></li>
+    <li class="active">Checkout</li>
+</ul>
+
+<div class="page-header">
+    <div class="pull-right"><div class="span2">
+        <div class="progress progress-info progress-striped"><div class="bar" style="width:90%"></div></div>
+    </div></div>
+    <h1>Checkout</h1>
+</div>
+
+
+{exp:store_klarna:checkout terms_url="http://devdemon.local/terms" confirmation_url="store_klarna/confirmation" push_url="store_klarna/push"}
+{if klarna_error != ''}
+<div class="alert alert-error">{klarna_error}</div>
+{/if}
+
+{klarna_widget}
+{/exp:store_klarna:checkout}
+
+
+{embed="store_example/_footer"}
