@@ -73,6 +73,29 @@ class Store_klarna_ext
                 $trans->reference = $order['reservation'];
                 $trans->save();
 
+                // Update Billing Address
+                if (isset($order['billing_address']['given_name'])) $cart->billing_first_name = $order['billing_address']['given_name'];
+                if (isset($order['billing_address']['family_name'])) $cart->billing_last_name = $order['billing_address']['family_name'];
+                if (isset($order['billing_address']['street_address'])) $cart->billing_address1 = $order['billing_address']['street_address'];
+                if (isset($order['billing_address']['postal_code'])) $cart->billing_postcode = $order['billing_address']['postal_code'];
+                if (isset($order['billing_address']['city']))   $cart->billing_city = $order['billing_address']['city'];
+                if (isset($order['billing_address']['country'])) $cart->billing_country = strtoupper($order['billing_address']['country']);
+                if (isset($order['billing_address']['phone'])) $cart->billing_phone = $order['billing_address']['phone'];
+
+                if (isset($order['billing_address']['email'])) $cart->order_email = $order['billing_address']['email'];
+
+                // Update Shipping Address
+                if (isset($order['shipping_address']['given_name'])) $cart->shipping_first_name = $order['shipping_address']['given_name'];
+                if (isset($order['shipping_address']['family_name'])) $cart->shipping_last_name = $order['shipping_address']['family_name'];
+                if (isset($order['shipping_address']['street_address'])) $cart->shipping_address1 = $order['shipping_address']['street_address'];
+                if (isset($order['shipping_address']['postal_code'])) $cart->shipping_postcode = $order['shipping_address']['postal_code'];
+                if (isset($order['shipping_address']['city']))   $cart->shipping_city = $order['shipping_address']['city'];
+                if (isset($order['shipping_address']['country'])) $cart->shipping_country = strtoupper($order['shipping_address']['country']);
+                if (isset($order['shipping_address']['phone'])) $cart->shipping_phone = $order['shipping_address']['phone'];
+
+                // Update it!
+                $cart->save();
+
                 if ($order['status'] == 'checkout_complete') {
                 //if ($order['status'] == 'created') {
                     // Update The DB
